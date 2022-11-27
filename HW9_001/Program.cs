@@ -1,0 +1,26 @@
+﻿// Задача 1: Задайте значения M и N. Напишите программу,
+// которая выведет все чётные натуральные числа в промежутке от M до N с помощью рекурсии.
+// M = 1; N = 5 -> "2, 4"
+// M = 4; N = 8 -> "4, 6, 8"
+
+void PrintNumbers(int m, int n)
+{
+    if (n < m)
+    {
+        return;
+    }
+    System.Console.WriteLine(m);
+    if (m % 2 == 0)
+    {
+        PrintNumbers(m + 2, n);
+    }
+    else
+    {
+        m = m - 1;
+        PrintNumbers(m + 2, n);
+    }
+    
+}
+int m = 2;
+int n = 15;
+PrintNumbers(m, n);
